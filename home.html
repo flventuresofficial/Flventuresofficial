@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direct Supply Co. - Empowering Wholesellers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 500px;
+      overflow: hidden;
+      background-color: #000;
+    }
+    .hero img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #004aad;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .feature {
+      flex: 1;
+      min-width: 280px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta button {
+      background-color: #004aad;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .cta button:hover {
+      background-color: #003080;
+    }
+    .form-section {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 20px;
+    }
+    .form-section h2 {
+      color: #ff0000;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ff0000;
+      border-radius: 5px;
+      background-color: #fff;
+      color: #000;
+    }
+    .form-section button {
+      background-color: #ff0000;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-section button:hover {
+      background-color: #cc0000;
+    }
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Direct Supply Co.</h1>
+    <p>Your Trusted Partner in Product Wholesaling</p>
+  </header>  <section class="hero">
+    <img src="1.jpg" alt="Hero Image">
+  </section>  <section>
+    <h2>Empowering Wholesellers with Direct Deals</h2>
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Direct From Us</h3>
+        <p>We are the source. There are no middlemen, ensuring you get the best prices on all products.</p>
+      </div>
+      <div class="feature">
+        <h3>Lowest Prices Guaranteed</h3>
+        <p>Our products are offered at rock-bottom prices to give you maximum profit margins.</p>
+      </div>
+      <div class="feature">
+        <h3>Sales Assistance</h3>
+        <p>We help you move your stock by providing marketing and sales support to boost your success.</p>
+      </div>
+      <div class="feature">
+        <h3>Risk-Free Investment</h3>
+        <p>If we can't help you sell your inventory, we offer a full refund. Your investment is safe with us.</p>
+      </div>
+    </div>
+  </section>  <section class="cta">
+    <h2>Ready to Start Wholeseling?</h2>
+    <p>Join hundreds of successful retailers who trust F.L Ventures. every day.</p>
+    <button>Join Now</button>
+  </section>  <section class="form-section">
+    <h2>Become a Wholeseller</h2>
+    <form id="resellerForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </section>  <footer>
+    &copy; 2025 F.L Ventures. All rights reserved.
+  </footer>  <script>
+    function joinNow() {
+      alert("Thank you for your interest! Our team will contact you shortly.");
+    }
+
+    document.getElementById("resellerForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const fullName = document.getElementById("fullName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const address = document.getElementById("address").value.trim();
+
+      const message = `Hi, Am interested to becoming a ret. My name ${fullName}, my contact is ${phone}. My address is ${address}.`;
+      const whatsappURL = `https://wa.me/2348105641100?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+  </script></body>
+</html>
